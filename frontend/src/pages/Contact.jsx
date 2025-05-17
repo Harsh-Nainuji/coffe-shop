@@ -16,14 +16,20 @@ export default function Contact() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
           className="text-3xl font-bold text-coffee-dark"
-        >Find Us</motion.h2>
+        >
+          Find Us
+        </motion.h2>
         <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="w-full h-64 bg-gray-200 rounded-2xl shadow-soft-md"
+          className="w-full h-64 overflow-hidden rounded-2xl shadow-soft-md"
         >
-          {/* Map embed or placeholder */}
+          <img
+            src="/map.jpg"
+            alt="Map showing our cozy coffee shop location"
+            className="object-cover w-full h-full"
+          />
         </motion.div>
       </div>
 
@@ -34,7 +40,7 @@ export default function Contact() {
         className="p-6 space-y-4 bg-coffee-light rounded-2xl shadow-soft-md"
       >
         <h2 className="text-2xl font-semibold text-coffee-dark">Contact Us</h2>
-        {['name','email'].map((f,i) => (
+        {['name', 'email'].map((f, i) => (
           <input
             key={i}
             name={f}
@@ -54,7 +60,9 @@ export default function Contact() {
         <button
           type="submit"
           className="w-full py-2 text-white transition rounded-full bg-coffee-dark hover:bg-coffee-accent"
-        >Send Message</button>
+        >
+          Send Message
+        </button>
       </motion.form>
     </motion.div>
   );
