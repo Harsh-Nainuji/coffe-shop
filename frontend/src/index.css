@@ -1,0 +1,13 @@
+/* ── frontend/src/index.css ── */
+
+/* 1. Import Bootstrap BEFORE any @tailwind rules */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* 2. Then Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* (Any custom styles below) */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
